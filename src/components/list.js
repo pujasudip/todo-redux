@@ -10,9 +10,13 @@ class List extends Component{
     }
 
     render(){
-        console.log('a:');
+        console.log('a:', this.props);
         const listElements = this.props.list.map(item =>{
-            return <li key={item._id} className='collection-item'>{item.title}</li>
+            return (
+                <li key={item._id} className='collection-item'>
+                    <Link to={`/item/${item._id}`}>{item.title}</Link>
+                </li>
+            )
         });
         return (
             <div>

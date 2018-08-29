@@ -4,6 +4,7 @@ import List from './list';
 import {Route} from 'react-router-dom';
 import AddItem from './add_item';
 import NotFound from './404';
+import ItemView from './item_view';
 
 
 const App = () => (
@@ -15,6 +16,8 @@ const App = () => (
                component={AddItem}/>
         <Route path='/not-found'
                component={NotFound}/>
+        <Route path='/item/:id'
+               component={ItemView}/>
     </div>
 );
 
