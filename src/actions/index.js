@@ -10,5 +10,15 @@ export function getAllListData(){
     return {
         type: types.GET_ALL_LIST_DATA,
         payload: response
+        // payload: 'this is a test'
+    }
+}
+
+export function addItem(item){
+    const response = axios.post(`${BASE_URL}/todos${API_KEY}`, item);
+
+    return {
+        type: types.ADD_ITEM,
+        payload: response
     }
 }
